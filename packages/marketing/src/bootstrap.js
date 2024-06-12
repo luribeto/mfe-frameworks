@@ -4,7 +4,7 @@ import App from './App';
 
 // Mount function to start up the app
 const mount = (el) => {
-  ReactDOM.render(<App history={history} />, el);
+  ReactDOM.render(<App/>, el);
 };
 
 // If we are in development and in isolation,
