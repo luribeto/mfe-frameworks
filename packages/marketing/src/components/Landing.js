@@ -26,6 +26,10 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
+    h1: {
+      fontSize: '28px',
+      color: 'blue'
+    },
     a: {
       textDecoration: 'none',
     },
@@ -124,7 +128,7 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      <h1>Heading</h1>
                     </Typography>
                     <Typography>
                       This is a media card. You can use this section to describe

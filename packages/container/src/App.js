@@ -13,10 +13,6 @@ const MarketingLazy = lazy(() => import('./components/MarketingApp'));
 const AuthLazy = lazy(() => import('./components/AuthApp'));
 const DashboardLazy = lazy(() => import('./components/DashboardApp'));
 
-const generateClassName = createGenerateClassName({
-  productionPrefix: 'co',
-});
-
 const history = createBrowserHistory();
 
 export default () => {
@@ -30,7 +26,7 @@ export default () => {
 
   return (
     <Router history={history}>
-      <StylesProvider generateClassName={generateClassName}>
+      <StylesProvider>
         <div>
           <Header
             onSignOut={() => setIsSignedIn(false)}

@@ -8,6 +8,10 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
+    h1: {
+      fontSize: '18px',
+      color: 'red'
+    },
     ul: {
       margin: 0,
       padding: 0,
@@ -79,7 +83,7 @@ export default function Header({ isSignedIn, onSignOut }) {
             component={RouterLink}
             to="/"
           >
-            App
+            <h1>App</h1>
           </Typography>
           <Button
             color="primary"
