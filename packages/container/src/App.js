@@ -14,6 +14,9 @@ const AuthLazy = lazy(() => import('./components/AuthApp'));
 const DashboardLazy = lazy(() => import('./components/DashboardApp'));
 
 const history = createBrowserHistory();
+const generateClassName = createGenerateClassName({
+  seed: 'co',
+});
 
 export default () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -26,7 +29,7 @@ export default () => {
 
   return (
     <Router history={history}>
-      <StylesProvider>
+      <StylesProvider generateClassName={generateClassName}>
         <div>
           <Header
             onSignOut={() => setIsSignedIn(false)}
