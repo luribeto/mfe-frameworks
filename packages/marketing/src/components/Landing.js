@@ -34,12 +34,13 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: 'none',
     },
   },
+  container: {
+    backgroundColor: 'yellow',
+    border: '2px solid green',
+    padding: theme.spacing(8, 0, 6),
+  },
   icon: {
     marginRight: theme.spacing(2),
-  },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -74,7 +75,7 @@ export default function Album() {
     <React.Fragment>
       <main>
         {/* Hero unit */}
-        <div className={classes.heroContent}>
+        <div className={classes.container}>
           <Container maxWidth="sm">
             <Typography
               component="h1"
@@ -128,7 +129,7 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      <h1>Heading</h1>
+                      Heading
                     </Typography>
                     <Typography>
                       This is a media card. You can use this section to describe

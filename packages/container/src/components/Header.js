@@ -21,6 +21,11 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: 'none',
     },
   },
+  // container: {
+  //   backgroundColor: 'blue !important',
+  //   padding: '50px',
+  //   border: '4px dotted red',
+  // },
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
@@ -83,7 +88,9 @@ export default function Header({ isSignedIn, onSignOut }) {
             component={RouterLink}
             to="/"
           >
-            <h1>App</h1>
+            <div className={classes.container} >
+              App
+            </div>
           </Typography>
           <Button
             color="primary"
